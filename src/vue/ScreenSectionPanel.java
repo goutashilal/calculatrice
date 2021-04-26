@@ -3,7 +3,7 @@ package vue;
 import javax.swing.*;
 import java.awt.*;
 
-public class ScreenSectionPanel extends JPanel {
+public class ScreenSectionPanel extends JPanel implements  Ivue{
 
     JLabel  labelScree;
     public ScreenSectionPanel()
@@ -14,7 +14,7 @@ public class ScreenSectionPanel extends JPanel {
         this.setPreferredSize(new Dimension(220, 30));
     }
 
-
+    @Override
 public   void buildComponent ()
 {
     this.add(labelScree);

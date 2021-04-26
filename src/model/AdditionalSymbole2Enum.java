@@ -24,7 +24,7 @@ public enum AdditionalSymbole2Enum {
                 priority = Integer.MAX_VALUE;
                 break;
             case ')':
-                priority = 0;
+                priority = Integer.MIN_VALUE;
                 break;
             default:
                 priority = Integer.MIN_VALUE;

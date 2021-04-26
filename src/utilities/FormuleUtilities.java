@@ -17,12 +17,12 @@ public class FormuleUtilities {
      */
     public  static   double calculateFormula(String   myString) throws Throwable {
 
-        String[] result = myString.split("(?<=[(-+*/^)])|(?=[(-+*/^)])");
+        String[] result =   myString.split("(?=[-+*/^()])|(?<=[^-+*/^][-+*/^])|(?<=[()])");
         System.out.println(Arrays.toString(result));
         ArrayList<String>  postFixArray=  translateToPostFix(result);
-       double   finalResult=   evaluatePostFixFormula(postFixArray);
-       System.out.println("Resultat final :"+finalResult);
-     return finalResult;
+        double   finalResult=   evaluatePostFixFormula(postFixArray);
+        System.out.println("Resultat final :"+finalResult);
+        return finalResult;
     }
 
     public static ArrayList<String> translateToPostFix(String[] result)

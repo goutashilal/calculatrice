@@ -10,7 +10,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class NumberSectionPanel extends JPanel implements ActionListener {
+public class NumberSectionPanel extends JPanel implements ActionListener,Ivue {
 
 
     JLabel   screenLabel;
@@ -28,9 +28,10 @@ public class NumberSectionPanel extends JPanel implements ActionListener {
         this.screenLabel = screenLabel;
     }
 
+    @Override
     public void buildComponent ()
     {
-        Dimension buttonDimension = new Dimension(50, 40);
+        Dimension buttonDimension = new Dimension(50, 44);
 
         for ( AdditionalSymbole2Enum symb:AdditionalSymbole2Enum.values() )
         {
@@ -70,7 +71,7 @@ public class NumberSectionPanel extends JPanel implements ActionListener {
                 if (caseValue.equals("C"))
                 {
                     screenLabel.setText("0");
-                    System.out.println(" Rest Formula = "
+                    System.out.println(" Reset Formula = "
                             + screenLabel.getText());
                 }
                 else if (caseValue.equals("="))
@@ -80,7 +81,7 @@ public class NumberSectionPanel extends JPanel implements ActionListener {
                        screenLabel.setText(finalResult+"");
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
-                        screenLabel.setText(throwable.getMessage());
+                        screenLabel.setText("Formule incorrect");
                     }
                 }
                 else

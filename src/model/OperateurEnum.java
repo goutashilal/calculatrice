@@ -8,7 +8,9 @@ public enum OperateurEnum
     multiplication ('*'),
     division ('/'),
     addition ('+'),
-    soustraction('-');
+    soustraction('-'),
+    sqrt('√');
+
     private  char  symbole;
 
     OperateurEnum(char symbol){

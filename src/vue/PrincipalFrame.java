@@ -2,23 +2,23 @@ package vue;
 
 import javax.swing.*;
 
-public class PrincipalFrame extends JFrame {
+public class PrincipalFrame extends JFrame implements Ivue{
     public   PrincipalFrame  ()
     {
 
-        this.setSize(240, 350);
+        this.setSize(242, 320);
         this.setTitle("Calculette");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
         this.setResizable(false);
-        buildComponenent();
+        buildComponent();
         this.setVisible(true);
     }
 
-    public void buildComponenent ()
-    {
-       CalculatorPanel   calculatorPanel = new CalculatorPanel();
-       this.setContentPane(calculatorPanel);
 
+    @Override
+    public void buildComponent() {
+        CalculatorPanel   calculatorPanel = new CalculatorPanel();
+        this.setContentPane(calculatorPanel);
     }
 }
