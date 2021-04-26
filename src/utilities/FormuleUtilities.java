@@ -1,6 +1,5 @@
 package utilities;
 
-import model.Operateur;
 import model.OperateurEnum;
 
 import java.util.ArrayList;
@@ -10,8 +9,12 @@ import java.util.Stack;
 public class FormuleUtilities {
 
 
-
-
+    /**
+     *
+     * @param myString
+     * @return
+     * @throws Throwable
+     */
     public  static   double calculateFormula(String   myString) throws Throwable {
 
         String[] result = myString.split("(?<=[(-+*/^)])|(?=[(-+*/^)])");

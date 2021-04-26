@@ -1,7 +1,5 @@
 package vue;
 
-import model.OperateurEnum;
-
 import javax.swing.*;
 import java.awt.*;
 
