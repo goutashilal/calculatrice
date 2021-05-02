@@ -25,6 +25,12 @@ public class FormuleUtilities {
         return finalResult;
     }
 
+
+    /**
+     * Translate to post fix
+     * @param result
+     * @return
+     */
     public static ArrayList<String> translateToPostFix(String[] result)
     {
         ArrayList<String> postFixResult = new ArrayList<>();
@@ -90,6 +96,12 @@ public class FormuleUtilities {
         return Integer.MIN_VALUE;
     }
 
+    /**
+     * Evaluat formula
+     * @param postFix
+     * @return
+     * @throws Throwable
+     */
     public  static Double   evaluatePostFixFormula (ArrayList<String> postFix) throws Throwable {
         Stack<Double> pile=new Stack<>();
 
